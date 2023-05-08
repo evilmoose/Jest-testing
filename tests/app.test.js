@@ -1,12 +1,16 @@
 const {square} = require('../app.js');
 
-test('square should square a', function () {
-    const res = square(3);
-    expect(res).toEqual(9);
+// Describe //
+// Group togetehr related tests, wrap these in 'describe' callback function.
+describe("add function", () => {
+    test('square should square a', function () {
+        const res = square(3);
+        expect(res).toEqual(9);
+    });
+    
+    test('square should square negative numbers', () => {
+        const res = square(-9);
+        expect(res).toEqual(81);
+    });
+    
 });
-
-test('square should square negative numbers', () => {
-    const res = square(-9);
-    expect(res).toEqual(81);
-});
-
